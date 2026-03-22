@@ -42,7 +42,7 @@ function App() {
       </div>
 
       <h3>Contacto</h3>
-      <p>Email: tuemail@gmail.com</p>
+      <p>Email: alejandrobochlopez@gmail.com</p>
     </div>
   );
 }
