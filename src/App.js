@@ -18,11 +18,11 @@ function App() {
           <a href="https://github.com/alejandroboch/app-control-de-gastos" target="_blank">
             Ver código
           </a>
-          <img src="/screenshots/aplicacion_gastos/login_screen.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_gastos/add_expense_screen.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_gastos/create_categories_screen.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_gastos/expense_history_screen.jpeg" width="304" />
-          <img src="/screenshots/aplicacion_gastos/dashboard_screen.jpeg" width="204" />
+          <img src="/screenshots/aplicacion_gastos/login_screen.png" width="300" />
+          <img src="/screenshots/aplicacion_gastos/add_expense_screen.png" width="300" />
+          <img src="/screenshots/aplicacion_gastos/create_categories_screen.png" width="300" />
+          <img src="/screenshots/aplicacion_gastos/expense_history_screen.png" width="304" />
+          <img src="/screenshots/aplicacion_gastos/dashboard_screen.png" width="204" />
       </div>
 
       <div>
@@ -31,14 +31,14 @@ function App() {
         <a href="https://github.com/alejandroboch/app-abarroteria-miscelania" target="_blank">
             Ver código
           </a>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_login.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_principal.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.jpeg" width="266" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_productos.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_inventario.jpeg" width="238.9" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_reportes.jpeg" width="300" />
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_notificaciones.jpeg" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_login.png" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_principal.png" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.png" width="266" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_productos.png" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.png" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_inventario.png" width="238.9" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_reportes.png" width="300" />
+          <img src="/screenshots/aplicacion_abarroteria/pantalla_notificaciones.png" width="300" />
       </div>
 
       <h3>Contacto</h3>
