@@ -1,68 +1,108 @@
+import "./styles/App.css";
+import ProjectCard from "./components/ProjectCard";
+
 function App() {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <div className="container">
       <h1>Brandon Alejandro Boch Lopez</h1>
-      <h2>Desarrollador de Software</h2>
+      <h2>Desarrollador de Software | Flutter | Firebase</h2>
 
       <h3>Sobre mí</h3>
       <p>
-        Soy desarrollador enfocado en aplicaciones móviles con Flutter y Firebase.
-        Me interesa crear soluciones tecnológicas que ayuden a mejorar la gestión de negocios.
+        Desarrollador enfocado en aplicaciones móviles con Flutter y Firebase.
+        He desarrollado soluciones para control de gastos y gestión de inventarios,
+        aplicadas a escenarios reales de negocio.
       </p>
 
       <h3>Proyectos</h3>
 
-      <div>
-        <h4>💸 App de Control de Gastos</h4>
-        <p>Aplicación para gestionar gastos personales con dashboard de indicadores.</p>
-          <a 
-            href="https://github.com/alejandroboch/app-control-de-gastos" 
-            target="_blank"
-            rel="noreferrer"
-          >
-            Ver código
-          </a>
-          <img src="/screenshots/aplicacion_gastos/login_screen.png" width="300" 
-          alt="Pantalla login de la app gastos"/>
-          <img src="/screenshots/aplicacion_gastos/add_expense_screen.png" width="300" 
-          alt="Pantalla para agregar gastos"/>
-          <img src="/screenshots/aplicacion_gastos/create_categories_screen.png" width="300" 
-          alt="Pantalla para crear categorias"/>
-          <img src="/screenshots/aplicacion_gastos/expense_history_screen.png" width="304" 
-          alt="Pantalla para revisar el historial de gastos"/>
-          <img src="/screenshots/aplicacion_gastos/dashboard_screen.png" width="204" 
-          alt="Pantalla para visualizar dashboar"/>
-      </div>
+      {/* PROYECTO GASTOS */}
+      <ProjectCard
+        title="💸 App de Control de Gastos"
+        description="Aplicación para gestionar gastos personales con dashboard de indicadores."
+        link="https://github.com/alejandroboch/app-control-de-gastos"
+        images={[
+          {
+            src: "/screenshots/aplicacion_gastos/login_screen.png",
+            alt: "login",
+            label: "Login de la aplicación"
+          },
+          {
+            src: "/screenshots/aplicacion_gastos/add_expense_screen.png",
+            alt: "gastos",
+            label: "Registro de gastos"
+          },
+          {
+            src: "/screenshots/aplicacion_gastos/create_categories_screen.png",
+            alt: "categorias",
+            label: "Creación de categorías"
+          },
+          {
+            src: "/screenshots/aplicacion_gastos/expense_history_screen.png",
+            alt: "historial",
+            label: "Historial de gastos"
+          },
+          {
+            src: "/screenshots/aplicacion_gastos/dashboard_screen.png",
+            alt: "dashboard",
+            label: "Dashboard de indicadores"
+          }
+        ]}
+      />
 
-      <div>
-        <h4>🛒 App de Abarrotería</h4>
-        <p>Aplicación para control de inventario y ventas en una tienda.</p>
-        <a 
-            href="https://github.com/alejandroboch/app-abarroteria-miscelania" 
-            target="_blank"
-            rel="noreferrer"
-          >
-            Ver código
-          </a>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_login.png" width="300" 
-          alt="Pantalla de login de abarroteria"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_principal.png" width="300" 
-          alt="Pantalla principal de la aplicación con todas las opciones disponibles"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.png" width="266" 
-          alt="Pantalla para registrar usuarios"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_registro_productos.png" width="300" 
-          alt="Pantalla para registrar productos"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.png" width="300" 
-          alt="Pantalla para revisar el historial de ventas"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_inventario.png" width="238.9" 
-          alt="Pantalla para revisar el inventario"/>
-          <img src="/screenshots/aplicacion_abarroteria/dashboard.png" width="238.9" 
-          alt="Pantalla para visualizar dashboard con indicadores relevantes"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_reportes.png" width="300" 
-          alt="Pantalla para descargar reportes"/>
-          <img src="/screenshots/aplicacion_abarroteria/pantalla_notificaciones.png" width="300" 
-          alt="Pantalla para revisar notificaciones"/>
-      </div>
+      {/* PROYECTO ABARROTERIA */}
+      <ProjectCard
+        title="🛒 App de Abarrotería (Proyecto principal)"
+        description="Aplicación para control de inventario, ventas, reportes y notificaciones en una tienda."
+        link="https://github.com/alejandroboch/app-abarroteria-miscelania"
+        images={[
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_login.png",
+            alt: "login",
+            label: "Login del sistema"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_principal.png",
+            alt: "principal",
+            label: "Pantalla principal"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.png",
+            alt: "usuarios",
+            label: "Registro de usuarios"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_registro_productos.png",
+            alt: "productos",
+            label: "Registro de productos"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.png",
+            alt: "ventas",
+            label: "Historial de ventas"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_inventario.png",
+            alt: "inventario",
+            label: "Inventario"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_dashboard.png",
+            alt: "dashboard",
+            label: "Dashboard"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_reportes.png",
+            alt: "reportes",
+            label: "Reportes"
+          },
+          {
+            src: "/screenshots/aplicacion_abarroteria/pantalla_notificaciones.png",
+            alt: "notificaciones",
+            label: "Notificaciones"
+          }
+        ]}
+      />
 
       <h3>Contacto</h3>
       <p>Email: alejandrobochlopez@gmail.com</p>
