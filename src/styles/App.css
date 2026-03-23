@@ -150,7 +150,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 /* CONTENIDO */
@@ -161,6 +161,7 @@ a:hover {
   max-width: 95%;
   max-height: 95%;
   text-align: center;
+  position: relative;
 }
 
 /* IMAGEN GRANDE */
@@ -171,7 +172,7 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
-.modal-content img:hove{
+.modal-content img:hover{
     transform: scale(1.02);
 }
 
@@ -183,7 +184,7 @@ a:hover {
 
 /*CERRAR CARRUSEL*/
 .close-btn {
-  position: fixed;      
+  position: absolute;      
   top: 20px;
   right: 25px;
   background: rgba(0,0,0,0.6);
@@ -193,7 +194,7 @@ a:hover {
   padding: 8px 12px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 3000;   
+  z-index: 10000;   
 }
 
 .close-btn:hover {

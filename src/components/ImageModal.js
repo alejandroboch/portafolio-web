@@ -73,24 +73,22 @@ const nextImage = () => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-  
-  <button className="close-btn" onClick={onClose}>✖</button>
+        <button className="close-btn" onClick={onClose}>✖</button>
 
-  <div
-    className="modal-content"
-    onClick={(e) => e.stopPropagation()}
-    onTouchStart={handleTouchStart}
-    onTouchMove={handleTouchMove}
-    onTouchEnd={handleTouchEnd}
-  >
+        <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
     {/* Flecha izquierda */}
-    <button className="nav-btn left" onClick={prevImage}>⬅</button>
-
-    <img src={current.src} alt={current.alt} />
-    <p>{current.label}</p>
+            <button className="nav-btn left" onClick={prevImage}>⬅</button>
+            <img src={current.src} alt={current.alt} />
+            <p>{current.label}</p>
 
     {/* Flecha derecha */}
-    <button className="nav-btn right" onClick={nextImage}>➡</button>
+            <button className="nav-btn right" onClick={nextImage}>➡</button>
   </div>
 </div>
   );
