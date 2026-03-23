@@ -78,7 +78,7 @@ function ImageModal({ image, onClose, images }) {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <img src={current.src} alt={current.alt} />
+        <img src={current.src} alt={current.alt || ""} />
         <p>{current.label}</p>
       </div>
     </div>
