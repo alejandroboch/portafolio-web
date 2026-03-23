@@ -24,7 +24,7 @@ function App() {
         />
 
         <div>
-          <h1>Brandon Alejandro Boch Lopez</h1>
+          <h1>Brandon Boch</h1>
           <h2>Desarrollador de Software</h2>
 
           <p style={{ textAlign: "justify" }}>
