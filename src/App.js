@@ -35,8 +35,8 @@ function App() {
           </p>
 
           <p style={{ textAlign: "justify" }}>
-            Actualmente busco mi primera oportunidad laboral, con interés en seguir aprendiendo sobre todo
-            en el área de análisis, crecer profesionalmente y aportar valor en proyectos reales.
+            Actualmente busco mi primera oportunidad laboral, con la idea de compartir mis conocimientos
+            adquiridos y crecer profesionalmente.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ function App() {
 
       {/* PROYECTO ABARROTERIA */}
       <ProjectCard
-        title="🛒 App de Abarrotería (Proyecto de Tesis)"
+        title="🛒 App de Control de Inventario para un Negocio Pequeño (Proyecto de Tesis)"
         description="Aplicación móvil para la gestión de inventario y ventas en una tienda, que incluye 
         control de productos, registro de ventas, generación de reportes y sistema de notificaciones.
         Permite la exportación de reportes en formato PDF. Desarrollado como proyecto de tesis de 
