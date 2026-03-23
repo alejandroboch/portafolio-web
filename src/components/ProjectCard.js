@@ -1,6 +1,10 @@
+import { useState } from "react";
 import ImageCard from "./ImageCard";
+import ImageModal from "./ImageModal";
 
 function ProjectCard({ title, description, link, images }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="card">
       <h4>{title}</h4>
@@ -17,9 +21,16 @@ function ProjectCard({ title, description, link, images }) {
             src={img.src}
             alt={img.alt}
             label={img.label}
+            onClick={() => setSelectedImage(img)}
           />
         ))}
       </div>
+
+      {/* MODAL */}
+      <ImageModal
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </div>
   );
 }
