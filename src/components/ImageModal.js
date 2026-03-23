@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 function ImageModal({ image, onClose, images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
+  // Determina la galería según si es una sola imagen o varias
   const gallery = images?.length ? images : image ? [image] : [];
 
+  // Prev y Next con useCallback para evitar warning de ESLint
+  const prevImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
+  }, [gallery.length]);
+
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
+  }, [gallery.length]);
+
+  // Inicializa el índice solo cuando se abre el modal
   useEffect(() => {
     if (!image) return;
     if (images?.length) {
@@ -17,12 +28,14 @@ function ImageModal({ image, onClose, images }) {
     }
   }, [image, images]);
 
+  // Bloquear scroll del body
   useEffect(() => {
     if (image) document.body.classList.add("modal-open");
     else document.body.classList.remove("modal-open");
     return () => document.body.classList.remove("modal-open");
   }, [image]);
 
+  // Teclado
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft") prevImage();
@@ -31,18 +44,11 @@ function ImageModal({ image, onClose, images }) {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [gallery]);
+  }, [prevImage, nextImage, onClose]);
 
   if (!image) return null;
 
-  const prevImage = () => {
-    setCurrentIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
-  };
-
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
-  };
-
+  // Swipe (celular)
   const handleTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
   const handleTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
   const handleTouchEnd = () => {
@@ -54,8 +60,10 @@ function ImageModal({ image, onClose, images }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
+      {/* X fuera */}
       <button className="close-btn" onClick={onClose}>✖</button>
 
+      {/* Flechas fuera */}
       {gallery.length > 1 && (
         <>
           <button className="nav-btn left" onClick={(e) => { e.stopPropagation(); prevImage(); }}>⬅</button>
@@ -63,6 +71,7 @@ function ImageModal({ image, onClose, images }) {
         </>
       )}
 
+      {/* Contenedor de imagen y label */}
       <div
         className="modal-content"
         onClick={(e) => e.stopPropagation()}
