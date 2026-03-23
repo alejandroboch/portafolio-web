@@ -155,11 +155,12 @@ a:hover {
 
 /* CONTENIDO */
 .modal-content {
+  max-width: 95%;
+  max-height: 90vh; /* máximo 90% del alto de la pantalla */
+  overflow-y: auto; /* permite scroll si es demasiado alto */
   background: #1e293b;
   padding: 20px;
   border-radius: 12px;
-  max-width: 95%;
-  max-height: 95%;
   text-align: center;
   position: relative;
 }
@@ -184,9 +185,9 @@ a:hover {
 
 /*CERRAR CARRUSEL*/
 .close-btn {
-  position: absolute;      
+  position: fixed;  
   top: 20px;
-  right: 25px;
+  right: 20px;
   background: rgba(0,0,0,0.6);
   border: none;
   color: white;
