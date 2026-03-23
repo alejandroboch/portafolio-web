@@ -11,13 +11,13 @@ function App() {
     <div className="container">
       <div className="header">
         <img
-          src={process.env.PUBLIC_URL + "/screenshots/fotos/foto.jpeg"}
+          src={process.env.PUBLIC_URL + "/screenshots/fotos/foto2.jpeg"}
           alt="Foto de Brandon"
           onClick={() =>
             setProfileImage({
-              src: process.env.PUBLIC_URL + "/screenshots/fotos/foto.jpeg",
+              src: process.env.PUBLIC_URL + "/screenshots/fotos/foto2.jpeg",
               alt: "Foto de perfil",
-              label: "Brandon Alejandro Boch Lopez"
+              label: "Brandon Boch"
             })
           }
           className="profile-pic"
