@@ -6,63 +6,63 @@ import ImageModal from "./components/ImageModal";
 function App() {
   const [profileImage, setProfileImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="container">
       <div className="header">
-      <img
+        <img
           src="/screenshots/fotos/foto.jpeg"
-          alt="foto de Brandon"
+          alt="Foto de Brandon"
           onClick={() =>
             setProfileImage({
               src: "/screenshots/fotos/foto.jpeg",
-              alt: "foto de perfil",
+              alt: "Foto de perfil",
               label: "Brandon Alejandro Boch Lopez"
             })
           }
           className="profile-pic"
         />
 
-  <div>
-      <h1>Brandon Alejandro Boch Lopez</h1>
-      <h2>Desarrollador de Software</h2>
+        <div>
+          <h1>Brandon Alejandro Boch Lopez</h1>
+          <h2>Desarrollador de Software</h2>
 
-      <p style={{textAlign: "justify"}}>
-        Desarrollo aplicaciones móviles con flutter y soluciones utilizando Firebase, enfocadas en mejorar
-        la gestión de negocios. Los proyectos que he realizado han sido principalemente con fines de 
-        aprendizaje, lo que me ha permitido fortalecer mis habilidades en desarrollo y en el manejo de 
-        bases de datos.
-      </p>
-      <p style={{textAlign: "justify"}}>
-        Actualmente busco mi primera oportunidad laboral, con interés en seguir aprendiendo soretodo
-        en el área de analisis, crecer profecionalmente y aportar valor en proeyectos reales.
-      </p>
-    </div>
+          <p style={{ textAlign: "justify" }}>
+            Desarrollo aplicaciones móviles con Flutter y soluciones utilizando Firebase, enfocadas en mejorar
+            la gestión de negocios. Los proyectos que he realizado han sido principalmente con fines de 
+            aprendizaje, lo que me ha permitido fortalecer mis habilidades en desarrollo y en el manejo de 
+            bases de datos.
+          </p>
 
-      <ImageModal
-        image={profileImage}
-        onClose={() => setProfileImage(null)}
-      />
-  </div>
-
-        <h3>Tecnologías</h3>
-
-        <div className="skills">
-          <span>Flutter</span>
-          <span>Firebase</span>
-          <span>Firestore</span>
-          <span>Authentication</span>
-          <span>React</span>
-          <span>Java</span>
-          <span>C#</span>
-          <span>MySQL</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>MySQL</span>
-          <span>SQL Server</span>
-          <span>HTML</span>
-          <span>JavaScript</span>
-          <span>CSS</span>
+          <p style={{ textAlign: "justify" }}>
+            Actualmente busco mi primera oportunidad laboral, con interés en seguir aprendiendo sobre todo
+            en el área de análisis, crecer profesionalmente y aportar valor en proyectos reales.
+          </p>
         </div>
+
+        <ImageModal
+          image={profileImage}
+          onClose={() => setProfileImage(null)}
+        />
+      </div>
+
+      <h3>Tecnologías</h3>
+      <div className="skills">
+        <span>Flutter</span>
+        <span>Firebase</span>
+        <span>Firestore</span>
+        <span>Authentication</span>
+        <span>React</span>
+        <span>Java</span>
+        <span>C#</span>
+        <span>MySQL</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>SQL Server</span>
+        <span>HTML</span>
+        <span>JavaScript</span>
+        <span>CSS</span>
+      </div>
 
       <h3>Proyectos</h3>
 
@@ -75,35 +75,16 @@ function App() {
         fechas."
         link="https://github.com/alejandroboch/app-control-de-gastos"
         images={[
-          {
-            src: "/screenshots/aplicacion_gastos/login_screen.png",
-            alt: "login",
-            label: "Login de la aplicación"
-          },
-          {
-            src: "/screenshots/aplicacion_gastos/add_expense_screen.png",
-            alt: "gastos",
-            label: "Registro de gastos"
-          },
-          {
-            src: "/screenshots/aplicacion_gastos/create_categories_screen.png",
-            alt: "categorias",
-            label: "Creación de categorías"
-          },
-          {
-            src: "/screenshots/aplicacion_gastos/expense_history_screen.png",
-            alt: "historial",
-            label: "Historial de gastos"
-          },
-          {
-            src: "/screenshots/aplicacion_gastos/dashboard_screen.png",
-            alt: "dashboard",
-            label: "Dashboard de indicadores"
-          }
+          { src: "/screenshots/aplicacion_gastos/login_screen.png", alt: "Login", label: "Login de la aplicación" },
+          { src: "/screenshots/aplicacion_gastos/add_expense_screen.png", alt: "Gastos", label: "Registro de gastos" },
+          { src: "/screenshots/aplicacion_gastos/create_categories_screen.png", alt: "Categorías", label: "Creación de categorías" },
+          { src: "/screenshots/aplicacion_gastos/expense_history_screen.png", alt: "Historial", label: "Historial de gastos" },
+          { src: "/screenshots/aplicacion_gastos/dashboard_screen.png", alt: "Dashboard", label: "Dashboard de indicadores" }
         ]}
         onImageClick={(img) => setSelectedImage(img)} 
       />
-       <ImageModal
+
+      <ImageModal
         image={profileImage || selectedImage}
         images={selectedImage?.images} 
         onClose={() => {
@@ -121,60 +102,23 @@ function App() {
         licenciatura."
         link="https://github.com/alejandroboch/app-abarroteria-miscelania"
         images={[
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_login.png",
-            alt: "login",
-            label: "Login del sistema"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_principal.png",
-            alt: "principal",
-            label: "Pantalla principal"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.png",
-            alt: "usuarios",
-            label: "Registro de usuarios"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_registro_productos.png",
-            alt: "productos",
-            label: "Registro de productos"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.png",
-            alt: "ventas",
-            label: "Historial de ventas"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_inventario.png",
-            alt: "inventario",
-            label: "Inventario"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_dashboard.png",
-            alt: "dashboard",
-            label: "Dashboard"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_reportes.png",
-            alt: "reportes",
-            label: "Reportes"
-          },
-          {
-            src: "/screenshots/aplicacion_abarroteria/pantalla_notificaciones.png",
-            alt: "notificaciones",
-            label: "Notificaciones"
-          }
-        ]} 
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_login.png", alt: "Login", label: "Login del sistema" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_principal.png", alt: "Principal", label: "Pantalla principal" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_registro_usuario.png", alt: "Usuarios", label: "Registro de usuarios" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_registro_productos.png", alt: "Productos", label: "Registro de productos" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_historial_ventas.png", alt: "Ventas", label: "Historial de ventas" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_inventario.png", alt: "Inventario", label: "Inventario" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_dashboard.png", alt: "Dashboard", label: "Dashboard" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_reportes.png", alt: "Reportes", label: "Reportes" },
+          { src: "/screenshots/aplicacion_abarroteria/pantalla_notificaciones.png", alt: "Notificaciones", label: "Notificaciones" }
+        ]}
+        onImageClick={(img) => setSelectedImage(img)}
       />
 
       <h3>Contacto</h3>
       <div className="contact">
         <p>Email: alejandrobochlopez@gmail.com</p>
-        <a href="https://github.com/alejandroboch" target="_blank" rel="noreferrer">
-          GitHub
-        </a>
+        <a href="https://github.com/alejandroboch" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ function ProjectCard({ title, description, link, images, onImageClick }) {
       <h4>{title}</h4>
       <p style={{ textAlign: "justify" }}>{description}</p>
 
-      <a href={link} target="_blank" rel="noreferrer">Ver código</a>
+      <a href={link} target="_blank" rel="noopener noreferrer">Ver código</a>
 
       <div className="images">
         {images.map((img, index) => (
