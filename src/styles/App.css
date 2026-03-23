@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -179,15 +183,23 @@ a:hover {
 
 /*CERRAR CARRUSEL*/
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: transparent;
+  position: fixed;      
+  top: 20px;
+  right: 25px;
+  background: rgba(0,0,0,0.6);
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 2000;   
 }
+
+.close-btn:hover {
+  background: rgba(0,0,0,0.9);
+}
+
 /*ZOOM AL ABRIR CARRUSEL*/
 @keyframes zoomIn {
   from {

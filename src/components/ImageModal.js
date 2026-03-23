@@ -12,6 +12,16 @@ function ImageModal({ image, onClose, images }) {
     }
   }, [image, images]);
 
+  useEffect(() => {
+  if (image) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+
+  return () => document.body.classList.remove("modal-open");
+}, [image]);
+
   // 👉 TECLADO
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -27,17 +37,16 @@ function ImageModal({ image, onClose, images }) {
   if (!image) return null;
 
   const prevImage = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
-  };
+  setCurrentIndex((prev) =>
+    prev === 0 ? gallery.length - 1 : prev - 1
+  );
+};
 
-  const nextImage = () => {
-    setCurrentIndex((prev) =>
-      prev === images.length - 1 ? 0 : prev + 1
-    );
-  };
-
+const nextImage = () => {
+  setCurrentIndex((prev) =>
+    prev === gallery.length - 1 ? 0 : prev + 1
+  );
+};
   // 👉 SWIPE (celular)
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -57,7 +66,8 @@ function ImageModal({ image, onClose, images }) {
     }
   };
 
-  const current = images[currentIndex];
+  const gallery = images || [image];
+  const current = gallery[currentIndex];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
