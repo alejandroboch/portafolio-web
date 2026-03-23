@@ -8,7 +8,7 @@ function ProjectCard({ title, description, link, images }) {
   return (
     <div className="card">
       <h4>{title}</h4>
-      <p>{description}</p>
+      <p style={{textAlign: "justify"}}>{description}</p>
 
       <a href={link} target="_blank" rel="noreferrer">
         Ver código
@@ -21,7 +21,7 @@ function ProjectCard({ title, description, link, images }) {
             src={img.src}
             alt={img.alt}
             label={img.label}
-            onClick={() => setSelectedImage(img)}
+            onClick={() => setSelectedImage({ ...img, images })}
           />
         ))}
       </div>
@@ -29,8 +29,9 @@ function ProjectCard({ title, description, link, images }) {
       {/* MODAL */}
       <ImageModal
         image={selectedImage}
+        images={images}
         onClose={() => setSelectedImage(null)}
-      />
+        />
     </div>
   );
 }
