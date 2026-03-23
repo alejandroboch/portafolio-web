@@ -193,7 +193,7 @@ a:hover {
   padding: 8px 12px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 2000;   
+  z-index: 3000;   
 }
 
 .close-btn:hover {

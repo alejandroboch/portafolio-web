@@ -5,6 +5,9 @@ function ImageModal({ image, onClose, images }) {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
+  const gallery = images || [image];
+  const current = gallery[currentIndex];
+
   useEffect(() => {
     if (image && images) {
       const index = images.findIndex(img => img.src === image.src);
@@ -66,30 +69,30 @@ const nextImage = () => {
     }
   };
 
-  const gallery = images || [image];
-  const current = gallery[currentIndex];
+
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div
-        className="modal-content"
-        onClick={(e) => e.stopPropagation()}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        <button className="close-btn" onClick={onClose}>✖</button>
+  
+  <button className="close-btn" onClick={onClose}>✖</button>
 
-        {/* Flecha izquierda */}
-        <button className="nav-btn left" onClick={prevImage}>⬅</button>
+  <div
+    className="modal-content"
+    onClick={(e) => e.stopPropagation()}
+    onTouchStart={handleTouchStart}
+    onTouchMove={handleTouchMove}
+    onTouchEnd={handleTouchEnd}
+  >
+    {/* Flecha izquierda */}
+    <button className="nav-btn left" onClick={prevImage}>⬅</button>
 
-        <img src={current.src} alt={current.alt} />
-        <p>{current.label}</p>
+    <img src={current.src} alt={current.alt} />
+    <p>{current.label}</p>
 
-        {/* Flecha derecha */}
-        <button className="nav-btn right" onClick={nextImage}>➡</button>
-      </div>
-    </div>
+    {/* Flecha derecha */}
+    <button className="nav-btn right" onClick={nextImage}>➡</button>
+  </div>
+</div>
   );
 }
 
