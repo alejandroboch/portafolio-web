@@ -11,11 +11,11 @@ function App() {
     <div className="container">
       <div className="header">
         <img
-          src="/screenshots/fotos/foto.jpeg"
+          src="/screenshots/fotos/foto.png"
           alt="Foto de Brandon"
           onClick={() =>
             setProfileImage({
-              src: "/screenshots/fotos/foto.jpeg",
+              src: "/screenshots/fotos/foto.png",
               alt: "Foto de perfil",
               label: "Brandon Alejandro Boch Lopez"
             })
